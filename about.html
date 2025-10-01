@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Aurora Coffee Roasters | About</title>
+  <meta name='description' content='Learn the story behind Aurora Coffee Roasters. Meet the team, our roasting philosophy, and how we source our beans.'>
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: '#6f4e37', secondary: '#d2b48c', accent: '#8b5e3c' } } } }
+  </script>
+  <style>
+    @keyframes fadeIn { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: translateY(0); } }
+    .animate-fadeIn { animation: fadeIn 0.6s ease-out forwards; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class='font-sans antialiased text-gray-900'>
+  <!-- Navigation (same as index) -->
+  <nav class='fixed w-full bg-white shadow-md z-50' aria-label='Main navigation'>
+    <div class='container mx-auto px-6 py-4'>
+      <div class='flex items-center justify-between'>
+        <a href='index.html' class='text-2xl font-semibold text-primary'>Aurora Coffee Roasters</a>
+        <div class='hidden md:flex space-x-6 items-center'>
+          <a href='index.html' class='hover:text-primary transition'>Home</a>
+          <a href='about.html' class='hover:text-primary transition'>About</a>
+          <a href='menu.html' class='hover:text-primary transition'>Menu</a>
+          <a href='locations.html' class='hover:text-primary transition'>Locations</a>
+          <a href='contact.html' class='hover:text-primary transition'>Contact</a>
+        </div>
+        <button id='mobile-menu-btn' class='md:hidden p-2 rounded-md' aria-label='Open menu'>
+          <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'/>
+          </svg>
+        </button>
+      </div>
+      <div id='mobile-menu' class='hidden md:hidden pt-2 pb-2'>
+        <a href='index.html' class='block py-2'>Home</a>
+        <a href='about.html' class='block py-2'>About</a>
+        <a href='menu.html' class='block py-2'>Menu</a>
+        <a href='locations.html' class='block py-2'>Locations</a>
+        <a href='contact.html' class='block py-2'>Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class='relative h-96 bg-cover bg-center' style='background-image: url("https://source.unsplash.com/1600x900/?coffee,roastery");'>
+    <div class='absolute inset-0 bg-black opacity-30'></div>
+    <div class='relative z-10 h-full flex items-center justify-center'>
+      <div class='text-center text-white px-6 animate-fadeIn'>
+        <h1 class='text-4xl md:text-5xl font-extrabold mb-4'>Our Story</h1>
+        <p class='text-lg md:text-xl max-w-2xl mx-auto'>Aurora Coffee Roasters began when two friends turned a shared love of coffee into a mission: to honor farmers, roast with purpose, and serve communities with warmth. From our tiny Seattle roastery to your cup, every bean has a story.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Team -->
+  <section id='team' class='py-20 bg-white'>
+    <div class='container mx-auto px-6'>
+      <h2 class='text-3xl font-bold text-center mb-12'>Meet the Roasters</h2>
+      <div class='grid md:grid-cols-3 gap-8'>
+        <article class='text-center'>
+          <img src='https://source.unsplash.com/300x300/?barista' alt='Founder Maya' class='w-48 h-48 rounded-full mx-auto object-cover' loading='lazy'>
+          <h3 class='mt-4 text-xl font-semibold'>Maya Chen</h3>
+          <p class='text-gray-600'>Co-founder and head roaster. Passionate about single-origin programs and fair-trade partnerships.</p>
+        </article>
+        <article class='text-center'>
+          <img src='https://source.unsplash.com/300x300/?chef,roast' alt='Co-founder Theo' class='w-48 h-48 rounded-full mx-auto object-cover' loading='lazy'>
+          <h3 class='mt-4 text-xl font-semibold'>Theo Martinez</h3>
+          <p class='text-gray-600'>Roast development and café culture advocate. Focused on temperature-controlled profiles and clarity in cup.</p>
+        </article>
+        <article class='text-center'>
+          <img src='https://source.unsplash.com/300x300/?coffee,latte' alt='Roastery team' class='w-48 h-48 rounded-full mx-auto object-cover' loading='lazy'>
+          <h3 class='mt-4 text-xl font-semibold'>Lia Kim</h3>
+          <p class='text-gray-600'>Sustainability lead. Builds direct-trade programs with farms and seasonal menu innovation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (same as index for consistency) -->
+  <footer class='bg-gray-900 text-white py-12' aria-label='Footer'>
+    <div class='container mx-auto px-6'>
+      <div class='grid md:grid-cols-3 gap-8'>
+        <div>
+          <h4 class='text-xl font-bold mb-2'>Aurora Coffee Roasters</h4>
+          <p class='text-gray-400'>Small-batch roastery and cafe in Seattle. Crafting coffee with a sense of adventure and responsibility.</p>
+        </div>
+        <div>
+          <h4 class='font-semibold mb-2'>Hours</h4>
+          <p class='text-gray-400'>Mon–Fri: 7am–6pm</p>
+          <p class='text-gray-400'>Sat–Sun: 8am–4pm</p>
+        </div>
+        <div>
+          <h4 class='font-semibold mb-2'>Stay Connected</h4>
+          <div class='flex space-x-3'>
+            <a href='#' class='text-gray-400 hover:text-white transition'>Instagram</a>
+            <a href='#' class='text-gray-400 hover:text-white transition'>Facebook</a>
+            <a href='#' class='text-gray-400 hover:text-white transition'>Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class='border-t border-gray-800 mt-8 pt-6 text-center text-gray-400'>
+        <p>&copy; 2025 Aurora Coffee Roasters. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
